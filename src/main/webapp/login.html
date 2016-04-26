@@ -1,0 +1,39 @@
+<div class="row" style="margin-bottom: 72px; margin-top: 72px">
+<form name="loginForm" role="form" ng-submit="login()">
+	<div class="alert alert-danger" ng-show="error.show">
+		{{error.message}}
+	</div>
+  <div class="row">
+    <div class='col-md-2'> 	</div>
+    <div class='col-md-2'>
+	  <div class="form-group">
+		<label for="username">Username:</label> 
+	  </div>
+    </div>
+    <div class='col-md-2'>
+	  <div class="form-group" data-ng-class="{'has-error': loginForm.username.$invalid}">
+		<input type="text" class="form-control" id="username" name="username" placeholder="username" ng-model="credentials.username" data-ng-required="true" />
+	  </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class='col-md-2'> 	</div>
+    <div class='col-md-2'>
+	  <div class="form-group" style="margin-bottom: 10px">
+		<label for="password">Password:</label>
+	  </div>
+    </div>
+    <div class='col-md-2'>
+	  <div class="form-group" data-ng-class="{'has-error': loginForm.password.$invalid}" style="margin-bottom: 10px">
+		<input type="password" class="form-control" id="password" name="password" placeholder="password" ng-model="credentials.password" data-ng-required="true" />
+	  </div>
+    </div>
+  </div>
+  <div class="row" style="margin-bottom: 10px">
+    <div class='col-md-4'> </div>
+    <div class='col-md-2'>
+	  <button type="submit" class="btn btn-primary" data-ng-disabled="loginForm.username.$invalid || loginForm.password.$invalid">Submit</button>
+    </div>
+  </div>
+</form>
+</div>
