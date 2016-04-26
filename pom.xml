@@ -18,7 +18,7 @@
 	<properties>
 		<app.id>shameagoat</app.id>
 		<app.version>1</app.version>
-		<appengine.version>1.9.25</appengine.version>
+		<appengine.version>1.9.36</appengine.version>
 		<gcloud.plugin.version>0.9.58.v20150505</gcloud.plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -133,6 +133,13 @@
 		<outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes</outputDirectory>
 		<pluginManagement>
 			<plugins>
+				<plugin>
+    				<groupId>org.springframework.boot</groupId>
+    				<artifactId>spring-boot-maven-plugin</artifactId>
+    				<configuration>
+        				<executable>true</executable>
+    				</configuration>
+				</plugin>
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>versions-maven-plugin</artifactId>
